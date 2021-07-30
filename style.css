@@ -1,0 +1,143 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        html,
+        body {
+            display: grid;
+            height: 100%;
+            place-items: center;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 20px;
+            border-radius: 30px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            border: 1px solid black;
+        }
+        
+        .wrapper {
+            width: 400px;
+            background: #fff;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            border-top: 0px;
+        }
+        
+        .wrapper .title {
+            background: #007bff;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .wrapper .form {
+            padding: 20px 15px;
+            min-height: 400px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .wrapper .form .inbox {
+            width: 100%;
+            display: flex;
+            align-items: baseline;
+        }
+        
+        .wrapper .form .user-inbox {
+            justify-content: flex-end;
+        }
+        
+        .wrapper .form .inbox .icon {
+            height: 40px;
+            width: 40px;
+            background: #007bff;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            border-radius: 50%;
+        }
+        
+        .wrapper .form .bot-inbox .msg-header {
+            max-width: 60;
+            background: #007bff;
+            margin-left: 10px;
+            border-radius: 10px;
+        }
+        
+        .wrapper .form .inbox .msg-header p {
+            color: #fff;
+            padding: 10px;
+            font-size: 12px;
+            word-break: break-all;
+        }
+        
+        .wrapper .form .user-inbox .msg-header p {
+            color: #333;
+            background: #efefef;
+            margin: 5px;
+            border-radius: 10px;
+        }
+        
+        .wrapper .typing-field {
+            display: flex;
+            height: 60px;
+            width: 100%;
+            background-attachment: #efefef;
+            align-items: center;
+            justify-content: space-evenly;
+            background: lightgray;
+        }
+        
+        .wrapper .typing-field .input-data {
+            height: 40px;
+            width: 350px;
+            position: relative;
+        }
+        
+        .wrapper .typing-field .input-data:hover {
+            border: 1px solid #007bff;
+        }
+        
+        .wrapper .typing-field .input-data input {
+            height: 100%;
+            width: 100%;
+            padding: 0 80px 0 15px;
+            outline: none;
+            font-size: 15px;
+            background: #fff;
+        }
+        
+        .wrapper .typing-field .input-data button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            height: 30px;
+            width: 65px;
+            transform: translateY(-50%);
+            border-radius: 3px;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.7s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .wrapper .typing-field .input-data button:hover {
+            background: #fff;
+            color: black;
+        }
+        
+        .wrapper .typing-field .input-data input:valid~button {
+            opacity: 1;
+            pointer-events: auto;
+        }
